@@ -1,0 +1,37 @@
+/* Minimal reproduction of the WordPress "Yummy" theme look. No JS, no local images. */
+*{box-sizing:border-box}
+body{margin:0;background:#f9f9f9;color:#3a3a3a;font:16px/1.7 'Pontano Sans',sans-serif;overflow-x:hidden}
+a{color:#3a3a3a;text-decoration:none}
+a:hover{color:#cd9c42}
+h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;line-height:1.3;margin:0 0 .6em}
+h1{font-size:60px}h3{font-size:36px}h4{font-size:20px}h5{font-size:1em}
+.wrapper{width:92%;max-width:1180px;margin:0 auto}
+.page-section{padding:100px 0}
+
+header{background:#16151A;position:sticky;top:0;z-index:10}
+header .wrapper{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header img{max-height:65px;width:auto;display:block;margin:20px 0}
+header nav a{color:#fff;font-family:'Montserrat',sans-serif;text-transform:uppercase;font-size:14px;padding:30px 12px;display:inline-block}
+header nav a:hover,header nav a.current{color:#cd9c42}
+
+.banner{position:relative;padding:225px 0;background-size:cover;background-position:center;text-align:center}
+.banner:before{content:"";position:absolute;inset:0;background:#000;opacity:.5}
+.banner h2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;margin:0;color:#fff;font-size:48px;letter-spacing:10px;text-transform:uppercase}
+
+.center{text-align:center}
+.about{background:#fff;color:#000;padding:1px 2em;margin:2em 0}
+.columns{display:flex;gap:2em}
+.columns>div{flex:1;text-align:center}
+.columns img{max-width:100%;height:auto;border-radius:1em}
+.columns .nr img{border-radius:0}
+
+footer{background:#16151A center/cover;color:#fff;padding:40px 0;text-align:center;font-size:14px}
+footer a{color:#fff}
+footer span{display:block}
+
+@media(max-width:700px){
+  h1{font-size:36px}h3{font-size:26px}
+  .columns{flex-direction:column;align-items:center}
+  .page-section{padding:50px 0}
+  .banner{padding:120px 0}.banner h2{font-size:30px;letter-spacing:5px}
+}
